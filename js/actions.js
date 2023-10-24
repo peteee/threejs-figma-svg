@@ -9,14 +9,18 @@ import Stats from 'three/addons/libs/stats.module.js';
 let container, stats;
 stats = new Stats();
 container = document.createElement( 'div' );
+container.setAttribute("id", "stats");
 document.body.appendChild( container );
 container.appendChild( stats.dom );
 
 
 // RENDERER
-const renderer = new THREE.WebGLRenderer();
+const renderer = new THREE.WebGLRenderer({ alpha: true });
 renderer.setSize( window.innerWidth, window.innerHeight );
+renderer.setClearColor(0xFFFFFF, .55);
+renderer.domElement.id = "threeD-thingy";
 document.body.appendChild( renderer.domElement );
+
 
 //Create a WebGLRenderer and turn on shadows in the renderer
 renderer.shadowMap.enabled = true;
