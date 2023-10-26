@@ -10,3 +10,9 @@ Figma:
 ThreeJS:
 
 <img src="https://github.com/peteee/threejs-figma-svg/blob/main/screen-grabs/Screenshot%20from%202023-10-20%2013-58-09.png?raw=true">
+
+
+NEW - Combining HTML & CSS Layout with ThreeJS in the background:
+
+<img src="https://raw.githubusercontent.com/peteee/threejs-figma-svg/main/screen-grabs/Screenshot%20from%202023-10-26%2015-54-58.png">
+
