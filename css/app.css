@@ -29,6 +29,7 @@ body {
     position: absolute;
     top:0px;
     /* z-index: -1; */
+    /* height: 100vh !important; */
 }
 
 header {
@@ -78,9 +79,9 @@ footer {
 header, #wrapper, footer{
     max-width: 60%;
     position: relative;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     z-index: 1;
 }
 #wrapper{
-    pointer-events: none;
+    /* pointer-events: none; */
 }

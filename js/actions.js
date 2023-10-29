@@ -16,7 +16,7 @@ container.appendChild( stats.dom );
 
 // RENDERER
 const renderer = new THREE.WebGLRenderer({ alpha: true });
-renderer.setSize( window.innerWidth, window.innerHeight );
+renderer.setSize( window.innerWidth, document.querySelector("body").offsetHeight);
 renderer.setClearColor(0xFFFFFF, .55);
 renderer.domElement.id = "threeD-thingy";
 document.body.appendChild( renderer.domElement );
@@ -108,6 +108,9 @@ loader.load(
 		}
 
         group.scale.y *= -1;
+		group.position.x = 55;
+		group.position.y = 35;
+
         // group.scale.y = group.scale.y * -1;
 		scene.add( group );
 
@@ -134,8 +137,8 @@ function onWindowResize() {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
 
-    renderer.setSize( window.innerWidth, window.innerHeight );
-
+    //renderer.setSize( window.innerWidth, window.innerHeight );
+	renderer.setSize( window.innerWidth, document.querySelector("body").offsetHeight);
 }
 /////////////////////////////////////////////
 
@@ -156,7 +159,7 @@ function animation( time ) {
     // cube.rotation.y = time / 1000;
     // torus.rotation.y = time / 2000;
 
-    group.rotation.y = time / 1000;
+    group.rotation.y = time / 3000;
 
     stats.update();
     renderer.render( scene, camera );
